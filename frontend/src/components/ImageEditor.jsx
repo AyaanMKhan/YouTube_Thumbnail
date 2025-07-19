@@ -20,6 +20,7 @@ const ImageEditor = ({
           </label>
           <textarea
             value={editInstructions}
+            // Handle changes to the edit instructions
             onChange={(e) => setEditInstructions(e.target.value)}
             placeholder="e.g., Make the colors more vibrant, add more text, change the background to blue, make the person look more excited..."
             className="w-full h-24 px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 resize-none"
@@ -36,6 +37,7 @@ const ImageEditor = ({
           </button>
           <button
             onClick={() => {
+              // Reset edit mode and instructions
               setShowEditMode(false);
               setEditInstructions("");
             }}

@@ -1,5 +1,7 @@
 import React from 'react';
 
+// Header Component
+// This component displays the main title and description for the application
 const Header = () => {
   return (
     <div className="text-center mb-8">

@@ -34,18 +34,24 @@ function App() {
   } = useThumbnailGenerator();
 
   return (
+     // Main App Container
     <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-6">
       <div className="w-full max-w-4xl">
+        {/* Header Component */}
         <Header />
         
+        {/* Input Form Component */}
         <InputForm
+          /* Pass props to InputForm */
           input={input}
           handleInputChange={handleInputChange}
           handleSubmit={handleSubmit}
           loading={loading}
           textareaRef={textareaRef}
         />
-
+        {/* Image Generator Component */}
+        {/* Pass props to ImageGenerator */}
+        {/* This component handles the image generation based on user input */}
         <ImageGenerator
           input={input}
           selectedStyle={selectedStyle}
@@ -54,9 +60,13 @@ function App() {
           imageLoading={imageLoading}
         />
 
+        {/* Error Display Component */}
+        {/* This component shows any errors related to input or image generation */}
         <ErrorDisplay error={error} imageError={imageError} />
 
+        {/* Generated Image Component */}
         <GeneratedImage
+          /* Pass props to GeneratedImage */
           generatedImage={generatedImage}
           showEditMode={showEditMode}
           setShowEditMode={setShowEditMode}

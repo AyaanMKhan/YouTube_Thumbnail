@@ -19,6 +19,7 @@ const ImageGenerator = ({
             Style
           </label>
           <select
+            // Handle style selection for the thumbnail image
             value={selectedStyle}
             onChange={(e) => setSelectedStyle(e.target.value)}
             className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
